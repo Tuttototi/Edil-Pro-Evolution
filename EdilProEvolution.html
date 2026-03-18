@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edil Pro Evolution | Impresa Edile Milano - Ristrutturazioni e Imbiancature</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Edil Pro Evolution è un'impresa edile a Milano specializzata in ristrutturazioni, imbiancature civili e riparazioni. Professionalità e qualità garantita.">
+    <meta name="keywords" content="impresa edile Milano, ristrutturazioni Milano, imbiancatura civile Milano, Edil Pro Evolution, muratore Milano, preventivi edilizia">
+    <meta name="author" content="Edil Pro Evolution">
+    <meta name="robots" content="index, follow">
+
+    <!-- Fonts: Outfit from Fontsource -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Config for Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3', // Deep professional blue
+                            light: '#f0f7ff', // Very light blue background
+                            dark: '#0f172a', // Dark slate for text
+                            accent: '#3b82f6', // Bright blue for buttons/hover
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for nuances not covered by Tailwind utilities */
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: #334155;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.5));
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 60px;
+            height: 4px;
+            background-color: #0056b3;
+            border-radius: 2px;
+        }
+
+        .center-title::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Floating WhatsApp Animation */
+        @keyframes pulse-custom {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        .whatsapp-float {
+            animation: pulse-custom 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-white antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-wide flex items-center gap-2">
+                <i class="fa-solid fa-helmet-safety text-brand-accent"></i>
+                EDIL PRO <span class="font-light">EVOLUTION</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-white hover:text-brand-accent transition font-medium">Home</a>
+                <a href="#chi-siamo" class="text-white hover:text-brand-accent transition font-medium">Chi Siamo</a>
+                <a href="#servizi" class="text-white hover:text-brand-accent transition font-medium">Servizi</a>
+                <a href="#contatti" class="bg-brand-accent hover:bg-blue-600 text-white px-5 py-2 rounded-full transition shadow-lg font-medium">
+                    Richiedi Preventivo
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark absolute w-full left-0 top-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a href="#home" class="text-white hover:text-brand-accent block">Home</a>
+                <a href="#chi-siamo" class="text-white hover:text-brand-accent block">Chi Siamo</a>
+                <a href="#servizi" class="text-white hover:text-brand-accent block">Servizi</a>
+                <a href="#contatti" class="text-brand-accent font-bold block">Richiedi Preventivo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://image.qwenlm.ai/public_source/cb4d0cbb-391f-469c-b189-f649a5a9d6bc/1f50bf709-2761-41f3-a5e6-520acbc6daa9.png" alt="Cantiere edile moderno Milano" class="w-full h-full object-cover">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center text-white">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
+                Edil Pro Evolution <br>
+                <span class="text-brand-accent text-3xl md:text-5xl lg:text-6xl font-light block mt-2">Costruiamo qualità, ristrutturiamo il futuro.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">
+                La solidità dell'esperienza e la qualità del risultato per la tua casa a Milano e provincia.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contatti" class="bg-brand-accent hover:bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition shadow-lg transform hover:-translate-y-1">
+                    Richiedi un preventivo
+                </a>
+                <a href="#servizi" class="bg-transparent border-2 border-white hover:bg-white hover:text-brand-dark text-white px-8 py-4 rounded-full text-lg font-semibold transition">
+                    Scopri i nostri servizi
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Chi Siamo Section -->
+    <section id="chi-siamo" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Text Content -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6 section-title">Chi Siamo</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                        <strong class="text-brand-blue">Edil Pro Evolution</strong> è un'impresa edile che nasce con l'obiettivo di offrire lavori di costruzione e ristrutturazione di alta qualità, unendo esperienza, professionalità e attenzione ai dettagli.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Operiamo nel settore edilizio con serietà e competenza, realizzando interventi su abitazioni private, edifici residenziali e spazi commerciali. Ogni progetto viene seguito con cura in tutte le sue fasi: dalla consulenza iniziale fino alla consegna finale dei lavori.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed border-l-4 border-brand-accent pl-4 italic">
+                        "La nostra missione è garantire ai clienti soluzioni affidabili, materiali di qualità e lavorazioni eseguite a regola d'arte, rispettando tempi e budget concordati."
+                    </p>
+                </div>
+                <!-- Image Content -->
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-2 border-brand-accent rounded-lg z-0 hidden md:block"></div>
+                    <img src="https://image.qwenlm.ai/public_source/cb4d0cbb-391f-469c-b189-f649a5a9d6bc/1253951ad-5c54-4d32-a8ae-3672a41930a1.png" alt="Progettazione edile e planimetrie" class="relative z-10 rounded-lg shadow-xl w-full object-cover h-[400px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Punti di Forza (Features) -->
+    <section class="py-16 bg-brand-light">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+                <!-- Feature 1 -->
+                <div class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fa-solid fa-hard-hat"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Esperienza</h3>
+                    <p class="text-sm text-gray-500">Anni di settore edile</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Precisione</h3>
+                    <p class="text-sm text-gray-500">Professionalità nei dettagli</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Qualità</h3>
+                    <p class="text-sm text-gray-500">Materiali di alto livello</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Tempestività</h3>
+                    <p class="text-sm text-gray-500">Rispetto delle scadenze</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Assistenza</h3>
+                    <p class="text-sm text-gray-500">Supporto in ogni fase</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servizi Section -->
+    <section id="servizi" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4 section-title center-title">I Nostri Servizi</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Offriamo soluzioni complete per ogni esigenza edilizia, dal piccolo intervento di manutenzione alla ristrutturazione chiavi in mano.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group rounded-xl overflow-hidden shadow-lg bg-white border border-gray-100 transition hover:shadow-2xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://image.qwenlm.ai/public_source/cb4d0cbb-391f-469c-b189-f649a5a9d6bc/1f50bf709-2761-41f3-a5e6-520acbc6daa9.png" alt="Ristrutturazioni complete" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Ristrutturazioni Complete</h3>
+                        <p class="text-gray-600 text-sm mb-4">Gestione a 360° del tuo immobile. Demolizioni, rifacimenti impianti e finiture di pregio.</p>
+                        <a href="#contatti" class="text-brand-accent font-semibold text-sm hover:underline">Richiedi info &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group rounded-xl overflow-hidden shadow-lg bg-white border border-gray-100 transition hover:shadow-2xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://image.qwenlm.ai/public_source/cb4d0cbb-391f-469c-b189-f649a5a9d6bc/1f3884413-62af-43f3-9fba-10d049d35e17.png" alt="Lavori di muratura" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Lavori di Muratura</h3>
+                        <p class="text-gray-600 text-sm mb-4">Costruzione di tramezzi, intonaci, cappotti termici e opere strutturali.</p>
+                        <a href="#contatti" class="text-brand-accent font-semibold text-sm hover:underline">Richiedi info &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group rounded-xl overflow-hidden shadow-lg bg-white border border-gray-100 transition hover:shadow-2xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://image.qwenlm.ai/public_source/cb4d0cbb-391f-469c-b189-f649a5a9d6bc/120c54f43-d254-49ed-ab37-b53caf01d445.png" alt="Imbiancature e rifacimento bagni" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Rifacimento Bagni e Interni</h3>
+                        <p class="text-gray-600 text-sm mb-4">Sostituzione sanitari, piastrellature, imbiancature civili e posa pavimenti.</p>
+                        <a href="#contatti" class="text-brand-accent font-semibold text-sm hover:underline">Richiedi info &rarr;</a>
+                    </div>
+                </div>
+                
+                 <!-- Service 4 -->
+                 <div class="group rounded-xl overflow-hidden shadow-lg bg-white border border-gray-100 transition hover:shadow-2xl">
+                    <div class="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <i class="fa-solid fa-screwdriver-wrench text-6xl text-gray-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Manutenzione e Riparazione</h3>
+                        <p class="text-gray-600 text-sm mb-4">Interventi rapidi per piccole e grandi riparazioni domestiche e condominiali.</p>
+                        <a href="#contatti" class="text-brand-accent font-semibold text-sm hover:underline">Richiedi info &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="group rounded-xl overflow-hidden shadow-lg bg-white border border-gray-100 transition hover:shadow-2xl">
+                    <div class="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                        <i class="fa-solid fa-building text-6xl text-gray-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Lavori Edili Civili</h3>
+                        <p class="text-gray-600 text-sm mb-4">Interventi su scale condominiali, facciate, cortili e spazi comuni.</p>
+                        <a href="#contatti" class="text-brand-accent font-semibold text-sm hover:underline">Richiedi info &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- CTA Card -->
+                <div class="rounded-xl overflow-hidden shadow-lg bg-brand-blue text-white flex flex-col items-center justify-center p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-4">Hai un progetto in mente?</h3>
+                    <p class="mb-6 opacity-90">Trasformiamo le tue idee in realtà. Contattaci per una consulenza gratuita.</p>
+                    <a href="#contatti" class="bg-white text-brand-blue px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition">Parla con noi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contatti Section -->
+    <section id="contatti" class="py-20 bg-brand-light relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12 bg-white rounded-2xl shadow-xl overflow-hidden">
+                
+                <!-- Contact Info -->
+                <div class="lg:w-1/3 bg-brand-dark text-white p-10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Contattaci</h3>
+                        <p class="text-gray-300 mb-8">Siamo a tua disposizione per preventivi gratuiti e consulenze tecniche.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <i class="fa-solid fa-location-dot mt-1 text-brand-accent"></i>
+                                <div>
+                                    <h4 class="font-bold">Sede Operativa</h4>
+                                    <p class="text-sm text-gray-300">Milano e Dintorni<br>(Servizio su appuntamento)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fa-solid fa-phone text-brand-accent"></i>
+                                <div>
+                                    <h4 class="font-bold">Telefono</h4>
+                                    <p class="text-sm text-gray-300">+39 02 123 4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fa-solid fa-envelope text-brand-accent"></i>
+                                <div>
+                                    <h4 class="font-bold">Email</h4>
+                                    <p class="text-sm text-gray-300">info@edilproevolution.it</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <p class="text-xs text-gray-400 mb-2">P.IVA: 12345678901</p>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent transition"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent transition"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:w-2/3 p-10">
+                    <h3 class="text-2xl font-bold text-brand-dark mb-6">Richiedi un Preventivo</h3>
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome e Cognome</label>
+                                <input type="text" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefono</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Messaggio</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition"></textarea>
+                        </div>
+                        <div class="mb-6 flex items-center">
+                            <input type="checkbox" id="privacy" required class="w-4 h-4 text-brand-blue border-gray-300 rounded focus:ring-brand-blue">
+                            <label for="privacy" class="ml-2 block text-sm text-gray-600">
+                                Accetto la <a href="#" class="text-brand-blue underline">Privacy Policy</a> e il trattamento dei dati personali.
+                            </label>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition shadow-md">
+                            Invia Richiesta
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-10 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h4 class="text-xl font-bold">Edil Pro Evolution</h4>
+                    <p class="text-sm text-gray-400 mt-1">Costruiamo qualità, ristrutturiamo il futuro.</p>
+                </div>
+                <div class="text-sm text-gray-400">
+                    &copy; 2023 Edil Pro Evolution. Tutti i diritti riservati. P.IVA 12345678901
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/39021234567" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition whatsapp-float" aria-label="Chatta su WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-brand-dark', 'shadow-md', 'py-2');
+                navbar.classList.remove('bg-transparent', 'py-4');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-4');
+                navbar.classList.remove('bg-brand-dark', 'shadow-md', 'py-2');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Form Submit Handler (Simulation)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'Invio in corso...';
+            btn.disabled = true;
+            btn.classList.add('opacity-75');
+
+            // Simulate API call
+            setTimeout(() => {
+                alert('Grazie! La tua richiesta è stata inviata con successo. Ti ricontatteremo al più presto.');
+                event.target.reset();
+                btn.innerText = originalText;
+                btn.disabled = false;
+                btn.classList.remove('opacity-75');
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
+
+
